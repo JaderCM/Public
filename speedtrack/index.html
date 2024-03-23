@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="A forma mais prática de rastrear sua velocidade.">
+    <title>Speed Track</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/vue.min.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <button v-if="!início" @click="iniciar">Iniciar</button>
+      <p v-for="coordenada in coordenadas" v-else>
+        <span v-text="coordenada.horário.toLocaleString()"></span>
+        <span v-text="`${coordenada.latitude},${coordenada.longitude} precisão de ${Math.trunc(coordenada.accuracy)}m`"></span>
+      </p>
+    </section>
+    <script src="./js/dialog.js" defer></script>
+    <script src="./js/index.js" defer></script>
+  </body>
+</html>
