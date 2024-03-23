@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>UAL</title>
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="js/ace/ace.js"></script>
+    <script type="text/javascript" src="js/ace/theme-monokai.js"></script>
+    <script type="text/javascript" src="js/ace/theme-chrome.js"></script>
+    <script type="text/javascript" src="js/ace/mode-javascript.js"></script>
+  </head>
+  <body>
+    <div class="controles nao-imprimir">
+      <button onclick="NovoCódigo(); editor.focus();"><img src="images/novo.svg"></button>
+      <button onclick="Abrir()" title="Ou pressione Ctrl+O">
+        <label for="arquivoUAL">
+          <img src="images/abrir.svg">
+        </label>
+        <input type="file" id="arquivoUAL" onchange="Abrir(this.files[0]); event.target.value = null;" accept=".ual" />
+      </button>
+      <button onclick="Salvar()" title="Ou pressione Ctrl+S"><img src="images/salvar.svg"></button>
+      <button onclick="InterpretarUAL()" title="Ou pressione F9"><img src="images/executar.svg"></button>
+      <button onclick="Imprimir()" title="Ou pressione Ctrl+P"><img src="images/print.svg"></button>
+    </div>
+    <div class="quadro">
+      <div id="editor" style="opacity:0"></div>
+      <div id="resultado" class="nao-imprimir">&nbsp;</div>
+    </div>
+    <div class="contato nao-imprimir">
+      <a href="https://chat.whatsapp.com/Dv21eT5g2li0WTs5rO3B14"><img src="images/whatsapp.svg"></a>
+      <a href="https://t.me/editor_ual"><img src="images/telegram.svg"></a>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>

@@ -1,0 +1,59 @@
+body {
+  text-align: right;
+}
+button:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 15px 5px #9ecaed;
+}
+.contato {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.contato img {
+  width: 36px;
+}
+.controles {
+  text-align: left;
+}
+.controles button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: 25em;
+}
+.controles img {
+  height: 36px;
+  cursor: pointer;
+}
+.controles input[type="file"] {
+  display: none;
+}
+#editor, #resultado {
+  width: calc(50% - 20px);
+  min-width: 280px;
+  margin: 10px;
+  flex-grow: 1;
+  text-align: left;
+  transition: opacity .25s ease-in-out;
+}
+.erro {
+  color: red;
+}
+.quadro {
+  display: flex;
+  flex-flow: wrap;
+  height: calc(100vh - 60px);
+}
+@media print {
+  .nao-imprimir, .ace_mobile-menu {
+    display: none !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
